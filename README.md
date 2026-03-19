@@ -6,10 +6,10 @@ Reproducible statistical analysis of California housing values (1990 census), fo
 
 ## At-a-glance results (matches the report)
 - Correlation r(median_income, median_house_value) ≈ **0.69**
-- Multiple regression R² ≈ **0.6076** (F ≈ **3993.81**)
-- One-way ANOVA across ocean proximity: F ≈ **1612.14**, η² ≈ **0.238**
+- Multiple regression R² ≈ **0.6076** (F ≈ **3993.81**, p < **0.0001**)
+- One-way ANOVA across ocean proximity: F ≈ **1612.14**, η² ≈ **0.238**, p < **0.0001**
 - K-means (k=4) silhouette ≈ **0.315**
-- 5-fold CV R² mean ≈ **0.6433**
+- 5-fold CV R² mean ≈ **0.6433** (SD ≈ **0.0224**, min ≈ **0.6179**, max ≈ **0.6744**)
 
 ## Key figures
 **Figure 4 — Geographic clustering**
@@ -18,14 +18,19 @@ Reproducible statistical analysis of California housing values (1990 census), fo
 **Figure 1 — Correlation matrix**
 ![Figure 1](outputs/figures/figure_1_correlation_matrix.png)
 
-**Figure 2 — Distribution analysis**
+<details>
+  <summary>More figures</summary>
+
+**Figure 2 — Distribution analysis**  
 ![Figure 2](outputs/figures/figure_2_distribution_analysis.png)
 
-**Figure 3 — Elbow plot**
+**Figure 3 — Elbow plot**  
 ![Figure 3](outputs/figures/figure_3_elbow_plot.png)
 
-**Figure 5 — Residual diagnostics**
+**Figure 5 — Residual diagnostics**  
 ![Figure 5](outputs/figures/figure_5_residual_diagnostics.png)
+
+</details>
 
 ## Quickstart (local)
 ```bash
