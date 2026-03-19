@@ -2,7 +2,7 @@
 
 Reproducible statistical analysis of California housing values (1990 census), focusing on income effects and ocean proximity.
 
-**Report (PDF):** `report/california_housing_affordability_public.pdf`
+**Report (PDF):** [california_housing_affordability_public.pdf](report/california_housing_affordability_public.pdf)
 
 ## At-a-glance results (matches the report)
 - Correlation r(median_income, median_house_value) ≈ **0.69**
