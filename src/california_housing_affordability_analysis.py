@@ -71,6 +71,18 @@ def money(x: float | int) -> str:
         return ""
     return f"${int(round(float(x))):,}"
 
+def format_p(p: float, threshold: float = 1e-4) -> str:
+    """Pretty-print p-values. Use '<0.0001' for very small values."""
+    try:
+        p = float(p)
+    except Exception:
+        return "NA"
+    if np.isnan(p):
+        return "NA"
+    if p < threshold:
+        return "<0.0001"
+    return f"{p:.4f}"
+
 
 def ensure_dir(p: Path) -> Path:
     p.mkdir(parents=True, exist_ok=True)
@@ -765,14 +777,14 @@ def main() -> None:
     print("\nMultiple regression summary:")
     print(f"R² = {model.rsquared:.4f}")
     print(f"Adj R² = {model.rsquared_adj:.4f}")
-    print(f"F = {model.fvalue:.2f}  p = {model.f_pvalue:.4g}")
+    print(f"F = {model.fvalue:.2f}  p {format_p(model.f_pvalue)}")
 
     # show the specific coefficient the narrative uses
     coef_income = float(model.params.get("median_income", np.nan))
     print(f"β(median_income) = {coef_income:,.2f} (per +1 in median_income, i.e., +$10k)")
 
     print("\nANOVA:")
-    print(f"F = {an['F']:.2f}  p = {an['p']:.4g}  eta^2 = {an['eta2']:.4f}")
+    print(f"F = {an['F']:.2f}  p {format_p(an['p'])}  eta^2 = {an['eta2']:.4f}")
 
     print("\nK-means:")
     print(f"k=4 silhouette = {cl['silhouette']:.3f}")
