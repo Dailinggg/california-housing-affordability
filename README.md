@@ -1,31 +1,27 @@
-﻿# California Housing Affordability — Reproducible Analysis
+# California Housing Affordability — Reproducible Analysis
 
-A reproducible statistical analysis of California housing values (1990 census), focusing on income effects and ocean proximity.
+Reproducible statistical analysis of California housing values (1990 census), focusing on income effects and ocean proximity.
 
-## Key results (matches the report)
-- Correlation r(median_income, median_house_value) ≈ 0.69
-- Multiple regression R² ≈ 0.6076 (F ≈ 3993.81)
-- One-way ANOVA across ocean proximity: F ≈ 1612.14, η² ≈ 0.238
-- K-means (k=4) silhouette ≈ 0.315
-- 5-fold CV R² mean ≈ 0.6433
+**Report (PDF):** `report/california_housing_affordability_public.pdf`
 
-## Repository structure
-- eport/ public PDF report
-- src/ analysis script
-- outputs/figures/ generated figures (Figure 1–5)
-- outputs/tables/ generated tables (Table 1–7)
-- data/ instructions to obtain the dataset (raw data not redistributed)
+## At-a-glance results (matches report)
+- Correlation r(median_income, median_house_value) ≈ **0.69**
+- Multiple regression R² ≈ **0.6076** (F ≈ **3993.81**)
+- One-way ANOVA across ocean proximity: F ≈ **1612.14**, η² ≈ **0.238**
+- K-means (k=4) silhouette ≈ **0.315**
+- 5-fold CV R² mean ≈ **0.6433**
 
-## How to run (local)
-1. Install dependencies:
-   pip install -r requirements.txt
-2. Download housing.csv (see data/README.md) and place it in the repo root:
-   ./housing.csv
-3. Run:
-   python src/california_housing_affordability_analysis.py
+## Key figures
+**Figure 4 — Geographic clustering (k=4)**
+![Figure 4](outputs/figures/figure_4_clusters_map.png)
 
-## Data
-This repo does not redistribute the raw dataset. See data/README.md for download instructions.
+**Figure 1 — Correlation matrix**
+![Figure 1](outputs/figures/figure_1_correlation_matrix.png)
 
-## Outputs
-Figures and tables are written to outputs/.
+## Quickstart (local)
+> Recommended: Python 3.12+
+
+```bash
+pip install -r requirements.txt
+# place housing.csv in repo root (see data/README.md)
+python src/california_housing_affordability_analysis.py
