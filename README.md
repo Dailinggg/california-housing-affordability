@@ -12,6 +12,9 @@ Reproducible statistical analysis of California housing values (1990 census), fo
 - 5-fold CV R² mean ≈ **0.6433**
 
 ## Key figures
+**Figure 4 — Geographic clustering**
+![Figure 4](outputs/figures/figure_4_geographic_clusters.png)
+
 **Figure 1 — Correlation matrix**
 ![Figure 1](outputs/figures/figure_1_correlation_matrix.png)
 
@@ -20,9 +23,6 @@ Reproducible statistical analysis of California housing values (1990 census), fo
 
 **Figure 3 — Elbow plot**
 ![Figure 3](outputs/figures/figure_3_elbow_plot.png)
-
-**Figure 4 — Geographic clustering**
-![Figure 4](outputs/figures/figure_4_geographic_clusters.png)
 
 **Figure 5 — Residual diagnostics**
 ![Figure 5](outputs/figures/figure_5_residual_diagnostics.png)
